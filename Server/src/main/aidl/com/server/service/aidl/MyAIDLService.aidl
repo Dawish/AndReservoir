@@ -1,5 +1,7 @@
 // MyAIDLService.aidl
+//生产的MyAIDLService.java类会使用这个包名
 package com.server.service.aidl;
+//导入数据javabean类，注意包名不要错
 import com.server.service.data.ServiceData;
 // Declare any non-default types here with import statements
 interface MyAIDLService {

@@ -23,7 +23,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class ActivityAidlService extends AppCompatActivity {
+public class ActivityAidlClient extends AppCompatActivity {
 
     @BindView(R.id.bind_service)
     public Button bindService;
@@ -83,7 +83,7 @@ public class ActivityAidlService extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aidl_client);
-        ButterKnife.bind(ActivityAidlService.this);
+        ButterKnife.bind(ActivityAidlClient.this);
         showMessage("-----远程服务等待连接-----", R.color.green_pure);
     }
 
@@ -179,7 +179,7 @@ public class ActivityAidlService extends AppCompatActivity {
             public void run() {
                 int startPos = stringBuilder.length();
                 stringBuilder.append("\n"+info);
-                tvInfo.setText(DisplayUtil.changeTextColor(ActivityAidlService.this, stringBuilder, color, startPos));
+                tvInfo.setText(DisplayUtil.changeTextColor(ActivityAidlClient.this, stringBuilder, color, startPos));
             }
         });
         tvInfo.postDelayed(new Runnable() {
@@ -191,7 +191,7 @@ public class ActivityAidlService extends AppCompatActivity {
     }
 
     protected void showToast(String msg){
-        Toast.makeText(ActivityAidlService.this, msg,Toast.LENGTH_SHORT).show();
+        Toast.makeText(ActivityAidlClient.this, msg,Toast.LENGTH_SHORT).show();
     }
 
     //客户端使用死亡代理，可以重启service
