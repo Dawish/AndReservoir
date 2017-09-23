@@ -225,5 +225,4 @@ public class ActivityAidlClient extends AppCompatActivity {
         intent.setPackage("com.server");
         bindService(intent, serviceConnection, BIND_AUTO_CREATE);
     }
-
 }

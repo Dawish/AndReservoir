@@ -10,11 +10,11 @@ def fastJsonVersion = "1.1.60.android"
 
 project.ext {
     android = [
-            compileSdkVersion: 26,
+            compileSdkVersion: 25,
             buildToolsVersion: "26.0.1",
             applicationId    : "com.andreservoir",
             minSdkVersion    : 15,
-            targetSdkVersion : 26,
+            targetSdkVersion : 25,
             versionCode      : 1,
             versionName      : "1.0"
     ]
